@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end; /* Align the glow effect at the bottom */
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+}
+
+.glow-effect {
+    width: 200vw;
+    height: 100px; /* Adjust the height as needed */
+    top: 105%;
+    background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #00ff00, #0000ff, #4b0082, #ee82ee);
+    background-size: 400%;
+    animation: glowing 10s linear infinite;
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.5);
+    filter: blur(110px);
+}
+
+@keyframes glowing {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
